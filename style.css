@@ -1,0 +1,321 @@
+body {
+  margin-top: 20px;
+  padding: 0;
+  font-family: 'Comic Sans MS', cursive;
+  text-align: center;
+
+ 
+  background-image: url('hart-heart.gif'); 
+  background-repeat:repeat;         
+  background-size: cover;            
+  background-position: center;
+  background-attachment: fixed;         
+  
+  color: #fd0478; 
+
+}
+
+.buttons .btn {
+  display: inline-block;
+  padding: 12px 28px;
+  margin: 10px;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.buttons .yes {
+  background-color: #f04198;
+  color: white;
+  box-shadow: 0 6px 12px rgba(255,105,180,0.4);
+}
+
+
+.buttons .no {
+  background-color: #f5abbc;
+  color: #444;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+
+.buttons .btn:hover {
+  background-color: coral;
+  box-shadow: 0 8px 16px rgba(255,105,180,0.6);
+  transform: translateY(-6px) scale(1.05);
+  color: black;
+}
+
+.chapter {
+  opacity: 0; 
+  transform: translateY(12px);
+  animation: fadeUp 1.2s ease-out forwards;
+}
+
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chapter h1{
+  font-weight: bolder;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 50px;
+}
+
+.chapter h1 {
+  animation: slideFromLeft 2.0s ease-out forwards;
+}
+.chapter h1 {
+  overflow: hidden;              /* hide text while typing */
+  white-space: nowrap;           /* keep in one line */
+  border-right: 3px solid #ff4d6d; /* typing cursor */
+  width: 0;
+  margin: 0 auto;
+
+  animation:
+    typing 4s steps(45, end) forwards,
+    blink 0.8s step-end infinite;
+}
+@keyframes typing {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-120px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.choice-box .question {
+  animation: slideFromLeft 1.6s ease-out forwards;
+}
+
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-120px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+body.yes-page{
+  background-image: url('borboletas-butterflies.gif');
+  background-color:black;
+}
+body.no-page{
+  background-image: url('giphy\ \(2\).gif');
+}
+.no-container {
+  color: #ff4d6d; 
+}
+.no-container h1 {
+  color: white;
+}
+.no-container h2 {
+  color:wheat;
+}
+.no-container h3 {
+  color: whitesmoke;
+}
+.no-container p {
+  color:wheat;
+  font-size: 20px;
+}
+.yes-container h2{
+  font-size: 40px;
+}
+.yes-container p{
+  color: white;
+  font-size: 20px;
+}
+.yes-container h1{
+  color: white;
+  font-size: 20px;
+}
+
+.buttons .yes {
+  animation: slideInLeftBtn 1.4s ease-out forwards;
+}
+
+.buttons .no {
+  animation: slideInRightBtn 1.4s ease-out forwards;
+}
+
+@keyframes slideInLeftBtn {
+  from {
+    transform: translateX(-120px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRightBtn {
+  from {
+    transform: translateX(120px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.yes-container h1,
+.yes-container p{
+  animation: slideInLeftBtn 1.4s ease-out forwards;
+}
+
+.yes-container h2,
+.yes-container h3{
+  animation: slideInRightBtn 1.4s ease-out forwards;
+}
+
+@keyframes slideInLeftBtn {
+  from {
+    transform: translateX(-120px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRightBtn {
+  from {
+    transform: translateX(120px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.buttons .click {
+  display: inline-block;       
+  padding: 10px 20px;          
+  margin: 10px;                
+  border-radius: 25px;         
+  font-size: 18px;             
+  font-weight: bold;           
+  text-decoration: none;       
+  background-color: #f04198;  
+  color: white;                
+  box-shadow: 0 6px 12px rgba(255,105,180,0.4); 
+  transition: transform 0.2s, box-shadow 0.2s;   
+  animation: jumpGlow 1.2s ease-in-out infinite;
+  animation-delay: 1s; 
+}
+@keyframes jumpGlow {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 0 5px rgba(255, 77, 109, 0.3);
+  }
+
+  25% {
+    transform: translateY(-18px);
+    box-shadow: 0 0 25px rgba(255, 77, 109, 0.9);
+  }
+
+  50% {
+    transform: translateY(0);
+    box-shadow: 0 0 35px rgba(255, 77, 109, 1);
+  }
+
+  75% {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(255, 77, 109, 0.8);
+  }
+
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 0 5px rgba(255, 77, 109, 0.3);
+  }
+}
+.buttons .click:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(255,105,180,0.6);
+}
+body.message-page{
+  background-image: url('coração.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;          
+  background-attachment: fixed;
+  background-color: black;
+}
+.no-container h1{
+  opacity: 0;
+  transform: translateY(-30px) scale(0.95);
+  animation: tearyDrop 2.5s ease-out forwards;
+}
+
+@keyframes tearyDrop {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.95);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(5px) scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.message-page h1 {
+  color: #ff4d6d;
+}
+.message-page p {
+  color: #ffb3c6;
+}
+.message-page h1 {
+  animation: slideInLeftBtn 1.4s ease-out forwards;
+}
+.message-page p {
+  animation: slideInRightBtn 1.4s ease-out forwards;
+}
+
+@keyframes slideInLeftBtn {
+  from {
+    transform: translateX(-120px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRightBtn {
+  from {
+    transform: translateX(120px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+
+
